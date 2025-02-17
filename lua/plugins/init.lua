@@ -115,6 +115,12 @@ return {
               return vim.fn.getcwd()
             end,
           },
+          require "neotest-vitest" {
+            -- Filter directories when searching for test files. Useful in large projects (see Filter directories notes).
+            filter_dir = function(name, rel_path, root)
+              return name ~= "node_modules"
+            end,
+          },
         },
       }
     end,
@@ -123,6 +129,7 @@ return {
       "nvim-treesitter/nvim-treesitter",
       "antoinemadec/FixCursorHold.nvim",
       "haydenmeade/neotest-jest",
+      "marilari88/neotest-vitest",
     },
   },
   {
@@ -247,5 +254,11 @@ return {
         },
       }
     end,
+  },
+  {
+    "azratul/live-share.nvim",
+    dependencies = {
+      "jbyuki/instant.nvim",
+    },
   },
 }

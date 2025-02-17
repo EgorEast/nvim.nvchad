@@ -55,6 +55,11 @@ map("n", "<leader>gc", ":DiffviewOpen HEAD~1<CR>", { desc = "Git Last Commit" })
 map("n", "<leader>gt", ":DiffviewToggleFile<CR>", { desc = "Git File History" })
 map("n", "<leader>gg", ":LazyGit<CR>", { desc = "Show floating lazy git" })
 
+-- Live Share
+
+map("n", "<leader>ls", ":LiveShareServer", { desc = "Start a Live Share server" })
+map("n", "<leader>lj", ":LiveShareJoin", { desc = "Join a Live Share session" })
+
 -- Terminal
 map("n", "<C-]>", function()
   require("nvchad.term").toggle { pos = "vsp", size = 0.4 }
