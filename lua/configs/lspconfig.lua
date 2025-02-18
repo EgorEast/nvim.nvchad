@@ -7,7 +7,16 @@ local capabilities = configs.capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssmodules_ls", "emmet_language_server", "cssls", "ts_ls", "clangd", "gopls", "gradle_ls" }
+local servers = {
+  "html",
+  "cssmodules_ls",
+  "emmet_language_server",
+  "cssls",
+  "ts_ls",
+  "clangd",
+  "gopls",
+  "gradle_ls",
+}
 
 local function organize_imports()
   local params = {

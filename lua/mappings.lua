@@ -18,8 +18,18 @@ map("n", "<c-j>", "<cmd>:TmuxNavigateDown<cr>", { desc = "Tmux Down" })
 -- Trouble
 
 map("n", "<leader>qx", "<cmd>TroubleToggle<CR>", { desc = "Open Trouble" })
-map("n", "<leader>qw", "<cmd>TroubleToggle workspace_diagnostics<CR>", { desc = "Open Workspace Trouble" })
-map("n", "<leader>qd", "<cmd>TroubleToggle document_diagnostics<CR>", { desc = "Open Document Trouble" })
+map(
+  "n",
+  "<leader>qw",
+  "<cmd>TroubleToggle workspace_diagnostics<CR>",
+  { desc = "Open Workspace Trouble" }
+)
+map(
+  "n",
+  "<leader>qd",
+  "<cmd>TroubleToggle document_diagnostics<CR>",
+  { desc = "Open Document Trouble" }
+)
 map("n", "<leader>qq", "<cmd>TroubleToggle quickfix<CR>", { desc = "Open Quickfix" })
 map("n", "<leader>ql", "<cmd>TroubleToggle loclist<CR>", { desc = "Open Location List" })
 map("n", "<leader>qt", "<cmd>TodoTrouble<CR>", { desc = "Open Todo Trouble" })
@@ -57,8 +67,9 @@ map("n", "<leader>gg", ":LazyGit<CR>", { desc = "Show floating lazy git" })
 
 -- Live Share
 
-map("n", "<leader>ls", ":LiveShareServer", { desc = "Start a Live Share server" })
+map("n", "<leader>ls", ":LiveShareServer<CR>", { desc = "Start a Live Share server" })
 map("n", "<leader>lj", ":LiveShareJoin", { desc = "Join a Live Share session" })
+map("n", "<leader>lf", ":!eslint_d % --fix<CR>", { desc = "Eslint fix current buffer" })
 
 -- Terminal
 map("n", "<C-]>", function()
