@@ -1,4 +1,21 @@
 return {
+  "nvim-lua/plenary.nvim",
+  {
+    "nvchad/ui",
+    lazy = false,
+    config = function()
+      require "nvchad"
+    end,
+  },
+  {
+    "nvchad/base46",
+    lazy = false,
+    lazy = true,
+    build = function()
+      require("base46").load_all_highlights()
+    end,
+  },
+  "nvzone/volt", -- optional, needed for theme switcher
   {
     "stevearc/conform.nvim",
     event = "BufWritePre",
@@ -255,6 +272,7 @@ return {
   }, -- To make a plugin not be loaded
   {
     "Exafunction/codeium.nvim",
+    lazy = false,
     dependencies = {
       "nvim-lua/plenary.nvim",
       "hrsh7th/nvim-cmp",

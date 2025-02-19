@@ -58,6 +58,7 @@ map("n", "<leader>gg", ":LazyGit<CR>", { desc = "Show floating lazy git" })
 -- Live Share
 map("n", "<leader>ls", ":LiveShareServer<CR>", { desc = "Start a Live Share server" })
 map("n", "<leader>lj", ":LiveShareJoin", { desc = "Join a Live Share session" })
+
 map("n", "<leader>lf", ":!eslint_d % --fix<CR>", { desc = "Eslint fix current buffer" })
 
 -- Session
