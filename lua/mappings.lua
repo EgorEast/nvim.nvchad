@@ -18,18 +18,8 @@ map("n", "<c-j>", "<cmd>:TmuxNavigateDown<cr>", { desc = "Tmux Down" })
 -- Trouble
 
 map("n", "<leader>qx", "<cmd>TroubleToggle<CR>", { desc = "Open Trouble" })
-map(
-  "n",
-  "<leader>qw",
-  "<cmd>TroubleToggle workspace_diagnostics<CR>",
-  { desc = "Open Workspace Trouble" }
-)
-map(
-  "n",
-  "<leader>qd",
-  "<cmd>TroubleToggle document_diagnostics<CR>",
-  { desc = "Open Document Trouble" }
-)
+map("n", "<leader>qw", "<cmd>TroubleToggle workspace_diagnostics<CR>", { desc = "Open Workspace Trouble" })
+map("n", "<leader>qd", "<cmd>TroubleToggle document_diagnostics<CR>", { desc = "Open Document Trouble" })
 map("n", "<leader>qq", "<cmd>TroubleToggle quickfix<CR>", { desc = "Open Quickfix" })
 map("n", "<leader>ql", "<cmd>TroubleToggle loclist<CR>", { desc = "Open Location List" })
 map("n", "<leader>qt", "<cmd>TodoTrouble<CR>", { desc = "Open Todo Trouble" })
@@ -66,10 +56,27 @@ map("n", "<leader>gt", ":DiffviewToggleFile<CR>", { desc = "Git File History" })
 map("n", "<leader>gg", ":LazyGit<CR>", { desc = "Show floating lazy git" })
 
 -- Live Share
-
 map("n", "<leader>ls", ":LiveShareServer<CR>", { desc = "Start a Live Share server" })
 map("n", "<leader>lj", ":LiveShareJoin", { desc = "Join a Live Share session" })
 map("n", "<leader>lf", ":!eslint_d % --fix<CR>", { desc = "Eslint fix current buffer" })
+
+-- Session
+map("n", "<leader>ss", ":SessionSave<CR>", { desc = "Saves a session based on the `cwd` in `root_dir`" })
+map("n", "<leader>sr", ":SessionRestore<CR>", { desc = "Restores a session based on the `cwd` from `root_dir`" })
+map("n", "<leader>sd", ":SessionDelete<CR>", { desc = "Deletes a session based on the `cwd` from `root_dir`" })
+map("n", "<leader>st", ":SessionToggleAutoSave<CR>", { desc = "Toggles autosave" })
+map(
+  "n",
+  "<leader>sf",
+  ":SessionSearch<CR>",
+  { desc = "Open a session picker, uses Telescope or Snacks if installed, vim.ui.select otherwise" }
+)
+map(
+  "n",
+  "<leader>sp",
+  ":SessionPurgeOrphaned<CR>",
+  { desc = "Removes all orphaned sessions with no working directory left" }
+)
 
 -- Terminal
 map("n", "<C-]>", function()
